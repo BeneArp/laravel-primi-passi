@@ -7,7 +7,24 @@
 </head>
 <body>
     
-    <h1>Hello World</h1>
+    <h1>{{$title}}</h1>
+
+    <h4>Elenco importantissmo</h4>
+
+    @if(!empty($parole))
+
+        <ul>
+            @foreach($parole as $parola)
+                <li>{{$parola}}</li>
+            @endforeach
+        </ul>
+        <!-- @dump($parole); -->
+
+    @else
+
+        <span>Non ho cose intelligenti da scrivere</span>
+
+    @endif
 
 </body>
 </html>

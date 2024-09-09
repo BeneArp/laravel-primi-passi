@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('home');
+
+    $data = [
+        'title' => 'Hello World'
+    ];
+
+    $parole = ['Queste', 'sono', 'parole', 'scritte', 'senza', 'senso', 'logico', ':)'];
+
+    return view('home', $data, compact('parole'));
 });
